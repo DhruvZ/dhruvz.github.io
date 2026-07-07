@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>About Me</title>
+		<title>Reimagining SED Fitting with Cosmological Simulations and Machine Learning</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -37,6 +37,7 @@
 						</ul>
 					</nav>
 
+
 				<!-- Main -->
 					<div id="main" class="alt">
 
@@ -49,14 +50,9 @@
 									<!-- <span class="image main"><img src="images/pic11.jpg" alt="" /></span> -->
 
 									<h2 id="content">Research</h2>
-										<p>I am a theoretical astrophysicist with an interest in the physics of how galaxies in our Universe form and evolve. I primarily work with large cosmological hydrodynamic simulations of galaxies. Much of my work centers on using our galaxy simulations to construct predictions for what observers will see with telescopes by forward modeling our simulations to synthetic observations and tying that to the physics modeled in galaxies. </p>
-										<p>Much of my work has been studying dust in galaxies. Dust is tricky because it influences all observations in many complex ways, affects galaxy evolution by influencing the state of the interstellar medium, and the scales at which dust physics occurs are impossible to resolve in simulations. Therefore, many simulations add so-called ‘subgrid’ models to represent the average behavior of the physical processes of dust. I have studied the influence of dust on the information about the formation of stars we are able to derive, how it might affect observations of galaxies in the early Universe, and how these results relate to the physical processes that govern its evolution. </p>
-										<p>Outside of dust specifically (though dust is a perfect subject matter for this), I am interested in how we can better understand the physics of galaxies better through simulations and build more complete models of galaxy physics. Many simulations make different, supposedly reasonable choices for what physics to represent and how to model it and are usually calibrated to recover what we see in nearby galaxies. However, galaxy simulations often have differing predictions on properties that they are not specifically designed to reproduce or may suggest different physics for how they end up matching observed galaxies. In fact, simulations will never report uncertainties on their outputs even though there are certainly uncertainties on their inputs. Furthermore, there is almost no work quantifying any aspect of these uncertainties, input or output. With careful numerical experiments and comparisons to observations, I hope to better understand what conclusions we can actually draw about the properties of galaxy physics and what observations can discriminate between different physical models. 
-								</p>
-									<h2 id="content2">About Me</h2>
-									<p>I spent most of my childhood in the small town of Simsbury, CT. For as long as I can remember, I wanted to become an astrophysicist. I then attended Rutgers University in New Jersey for my undergraduate degree in Astrophysics. Following that, I have been a graduate student in Astronomy at the University of Florida since fall 2021. </p>
-									<p>Both in research and in my personal life, I love to break down complicated questions to arrive at answers. In doing so, I try to build an end-to-end mental framework and really dig into the details of each aspect of the problem. In my free time, I like to play games and make my own ice cream. </p>
-								</div>
+                <p>My second project as a graduate student was to construct an SED fitting tool based on simulations. SED fitting is the process by which observers derive the properties of galaxies from observations; in general, it takes the form of building up a toy model of a galaxy until the model matches the input data. However, this process collapses a 3-dimensional galaxy into a single point and applies many assumptions which can bias inferred galaxy properties.</p>
+                  <p>However, in theory being able to use a simulated galaxy would remove some of these assumptions. I constructed a simulation-based-inference (SBI) pipeline Phot-Gal trained off of a wide variety of simulations and synthetic observations. These simulations came from the CAMELS-1P suite of cosmological volumes with the SIMBA and IllustrisTNG models where the galaxy physics parameters were varied one at a time. With this, I was intending to make it so that Phot-Gal was not tied to the assumptions of any particular model or the single set of parameters associated with the fiducial galaxy models. Phot-Gal is a first-of-its-kind SBI tool that recovers galaxy properties trained off of simulations that can process inputs with any combination of photometry, works over many redshifts, and returns robust uncertainties. Phot-Gal was successful in recovering the properties of the test galaxies and did better than traditional observational tools, but it did not always have appropriate uncertainties (though usually they were still better than the observational predictions). I analyzed the details of when and why Phot-Gal was failing and associated it with galaxies that are outliers in the stellar mass and stellar age plane. Phot-Gal is downloadable!</p>
+                </div>
 							</section>
 
 					</div>
